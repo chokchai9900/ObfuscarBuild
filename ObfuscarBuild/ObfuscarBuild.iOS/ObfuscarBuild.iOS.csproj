@@ -179,6 +179,7 @@
     
     <!-- for a xamarin ios library -->
     <AssemblySearchPath path="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\Xamarin.iOS\v1.0" />
+    <AssemblySearchPath path="\Library\Frameworks\Xamarin.iOS.framework\Versions\Current\lib\mono\Xamarin.iOS\v1.0" />
 	  <!-- for a xamarin android library -->
     <AssemblySearchPath path="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v9.0" />
     <AssemblySearchPath path="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v10.0" />
