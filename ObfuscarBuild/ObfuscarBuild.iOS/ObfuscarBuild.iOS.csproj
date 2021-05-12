@@ -178,7 +178,7 @@
     <Var name="OptimizeMethods" value="true" />
     
     <!-- for a xamarin ios library -->
-    <AssemblySearchPath path="/Library/Frameworks/Xamarin.iOS.framework/v1.0" />
+    <AssemblySearchPath path="\Library\Frameworks\Xamarin.iOS.framework\v1.0" />
     
     <AssemblySearchPath path="$(LibXamarin_Forms)" />
     @(AssembliesToObfuscate->'<Module file="%(FullPath)" ></Module>',' ')
