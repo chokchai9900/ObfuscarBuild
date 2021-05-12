@@ -1,0 +1,13 @@
+﻿<Obfuscator>
+  <Var name="RenameProperties" value="true" />
+  <Var name="RenameEvents" value="true" />
+  <Var name="RenameFields" value="true" />
+  <Var name="KeepPublicApi" value="false" />
+  <Var name="HidePrivateApi" value="true" />
+  <Var name="HideStrings" value="true" />
+  <Var name="UseUnicodeNames" value="true" />
+  <Var name="OptimizeMethods" value="true" />
+  <Var name="OutPath" value="..\..\..\..\..\bin\Release" />
+  <Module file="ObfuscarBuild.dll" />
+  <Module file="ObfuscarBuild.Android.dll" />
+</Obfuscator>
