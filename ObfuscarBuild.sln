@@ -7,10 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObfuscarBuild.Android", "Ob
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObfuscarBuild.iOS", "ObfuscarBuild\ObfuscarBuild.iOS\ObfuscarBuild.iOS.csproj", "{C2417E44-DEFE-4977-9230-425718A6DECD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObfuscarBuild", "ObfuscarBuild\ObfuscarBuild\ObfuscarBuild.csproj", "{B8D0CFBB-FAC5-424A-85E5-44C78C20CA68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObfuscarBuild", "ObfuscarBuild\ObfuscarBuild\ObfuscarBuild.csproj", "{B8D0CFBB-FAC5-424A-85E5-44C78C20CA68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		AppCenter|Any CPU = AppCenter|Any CPU
+		AppCenter|iPhone = AppCenter|iPhone
+		AppCenter|iPhoneSimulator = AppCenter|iPhoneSimulator
 		Debug|Any CPU = Debug|Any CPU
 		Debug|iPhone = Debug|iPhone
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
@@ -19,6 +22,15 @@ Global
 		Release|iPhoneSimulator = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E328DDE-FADB-4463-9208-AB890C5DFDC7}.AppCenter|Any CPU.ActiveCfg = Release|Any CPU
+		{6E328DDE-FADB-4463-9208-AB890C5DFDC7}.AppCenter|Any CPU.Build.0 = Release|Any CPU
+		{6E328DDE-FADB-4463-9208-AB890C5DFDC7}.AppCenter|Any CPU.Deploy.0 = Release|Any CPU
+		{6E328DDE-FADB-4463-9208-AB890C5DFDC7}.AppCenter|iPhone.ActiveCfg = AppCenter|Any CPU
+		{6E328DDE-FADB-4463-9208-AB890C5DFDC7}.AppCenter|iPhone.Build.0 = AppCenter|Any CPU
+		{6E328DDE-FADB-4463-9208-AB890C5DFDC7}.AppCenter|iPhone.Deploy.0 = AppCenter|Any CPU
+		{6E328DDE-FADB-4463-9208-AB890C5DFDC7}.AppCenter|iPhoneSimulator.ActiveCfg = AppCenter|Any CPU
+		{6E328DDE-FADB-4463-9208-AB890C5DFDC7}.AppCenter|iPhoneSimulator.Build.0 = AppCenter|Any CPU
+		{6E328DDE-FADB-4463-9208-AB890C5DFDC7}.AppCenter|iPhoneSimulator.Deploy.0 = AppCenter|Any CPU
 		{6E328DDE-FADB-4463-9208-AB890C5DFDC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6E328DDE-FADB-4463-9208-AB890C5DFDC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E328DDE-FADB-4463-9208-AB890C5DFDC7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
@@ -37,6 +49,11 @@ Global
 		{6E328DDE-FADB-4463-9208-AB890C5DFDC7}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{6E328DDE-FADB-4463-9208-AB890C5DFDC7}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{6E328DDE-FADB-4463-9208-AB890C5DFDC7}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
+		{C2417E44-DEFE-4977-9230-425718A6DECD}.AppCenter|Any CPU.ActiveCfg = Release|iPhoneSimulator
+		{C2417E44-DEFE-4977-9230-425718A6DECD}.AppCenter|iPhone.ActiveCfg = AppCenter|iPhone
+		{C2417E44-DEFE-4977-9230-425718A6DECD}.AppCenter|iPhone.Build.0 = AppCenter|iPhone
+		{C2417E44-DEFE-4977-9230-425718A6DECD}.AppCenter|iPhoneSimulator.ActiveCfg = AppCenter|iPhoneSimulator
+		{C2417E44-DEFE-4977-9230-425718A6DECD}.AppCenter|iPhoneSimulator.Build.0 = AppCenter|iPhoneSimulator
 		{C2417E44-DEFE-4977-9230-425718A6DECD}.Debug|Any CPU.ActiveCfg = Debug|iPhone
 		{C2417E44-DEFE-4977-9230-425718A6DECD}.Debug|Any CPU.Build.0 = Debug|iPhone
 		{C2417E44-DEFE-4977-9230-425718A6DECD}.Debug|Any CPU.Deploy.0 = Debug|iPhone
@@ -55,6 +72,12 @@ Global
 		{C2417E44-DEFE-4977-9230-425718A6DECD}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{C2417E44-DEFE-4977-9230-425718A6DECD}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{C2417E44-DEFE-4977-9230-425718A6DECD}.Release|iPhoneSimulator.Deploy.0 = Release|iPhoneSimulator
+		{B8D0CFBB-FAC5-424A-85E5-44C78C20CA68}.AppCenter|Any CPU.ActiveCfg = Release|Any CPU
+		{B8D0CFBB-FAC5-424A-85E5-44C78C20CA68}.AppCenter|Any CPU.Build.0 = Release|Any CPU
+		{B8D0CFBB-FAC5-424A-85E5-44C78C20CA68}.AppCenter|iPhone.ActiveCfg = AppCenter|Any CPU
+		{B8D0CFBB-FAC5-424A-85E5-44C78C20CA68}.AppCenter|iPhone.Build.0 = AppCenter|Any CPU
+		{B8D0CFBB-FAC5-424A-85E5-44C78C20CA68}.AppCenter|iPhoneSimulator.ActiveCfg = AppCenter|Any CPU
+		{B8D0CFBB-FAC5-424A-85E5-44C78C20CA68}.AppCenter|iPhoneSimulator.Build.0 = AppCenter|Any CPU
 		{B8D0CFBB-FAC5-424A-85E5-44C78C20CA68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B8D0CFBB-FAC5-424A-85E5-44C78C20CA68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8D0CFBB-FAC5-424A-85E5-44C78C20CA68}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
