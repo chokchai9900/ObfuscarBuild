@@ -169,7 +169,7 @@
   <ItemGroup>
     <None Include="obfuscar.xml" />
   </ItemGroup>
-  <Target Name="Obfuscate" AfterTargets="AfterBuild;CopyProjectReferencesToPackage" Condition=" '$(Configuration)' == 'Release' ">
+  <Target Name="ObfuscateRelease" AfterTargets="AfterBuild;CopyProjectReferencesToPackage" Condition=" '$(Configuration)' == 'Release' ">
     <!-- (c)2020 vapolia.eu, keep this line. MIT license. -->
     <ItemGroup>
       <AssembliesToObfuscate Include="$(TargetDir)\ObfuscarBuild.dll" />
@@ -211,7 +211,7 @@
     </ItemGroup>
     <Copy DestinationFolder="$(TargetDir)" SourceFiles="@(ObfuscarFiles)" />
   </Target>
-  <Target Name="Obfuscate" AfterTargets="AfterBuild;CopyProjectReferencesToPackage" Condition=" '$(Configuration)' == 'AppCenter' ">
+  <Target Name="ObfuscateAppCenter" AfterTargets="AfterBuild;CopyProjectReferencesToPackage" Condition=" '$(Configuration)' == 'AppCenter' ">
     <!-- (c)2020 vapolia.eu, keep this line. MIT license. -->
     <ItemGroup>
       <AssembliesToObfuscate Include="$(TargetDir)\ObfuscarBuild.dll" />
