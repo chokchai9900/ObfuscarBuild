@@ -211,7 +211,6 @@
     </ItemGroup>
     <Copy DestinationFolder="$(TargetDir)" SourceFiles="@(ObfuscarFiles)" />
   </Target>
-
   <Target Name="Obfuscate" AfterTargets="AfterBuild;CopyProjectReferencesToPackage" Condition=" '$(Configuration)' == 'AppCenter' ">
     <!-- (c)2020 vapolia.eu, keep this line. MIT license. -->
     <ItemGroup>

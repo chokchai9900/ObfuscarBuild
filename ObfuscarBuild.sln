@@ -52,8 +52,8 @@ Global
 		{C2417E44-DEFE-4977-9230-425718A6DECD}.AppCenter|Any CPU.ActiveCfg = Release|iPhoneSimulator
 		{C2417E44-DEFE-4977-9230-425718A6DECD}.AppCenter|iPhone.ActiveCfg = AppCenter|iPhone
 		{C2417E44-DEFE-4977-9230-425718A6DECD}.AppCenter|iPhone.Build.0 = AppCenter|iPhone
-		{C2417E44-DEFE-4977-9230-425718A6DECD}.AppCenter|iPhoneSimulator.ActiveCfg = AppCenter|iPhoneSimulator
-		{C2417E44-DEFE-4977-9230-425718A6DECD}.AppCenter|iPhoneSimulator.Build.0 = AppCenter|iPhoneSimulator
+		{C2417E44-DEFE-4977-9230-425718A6DECD}.AppCenter|iPhoneSimulator.ActiveCfg = AppCenter|iPhone
+		{C2417E44-DEFE-4977-9230-425718A6DECD}.AppCenter|iPhoneSimulator.Build.0 = AppCenter|iPhone
 		{C2417E44-DEFE-4977-9230-425718A6DECD}.Debug|Any CPU.ActiveCfg = Debug|iPhone
 		{C2417E44-DEFE-4977-9230-425718A6DECD}.Debug|Any CPU.Build.0 = Debug|iPhone
 		{C2417E44-DEFE-4977-9230-425718A6DECD}.Debug|Any CPU.Deploy.0 = Debug|iPhone
@@ -69,9 +69,9 @@ Global
 		{C2417E44-DEFE-4977-9230-425718A6DECD}.Release|iPhone.ActiveCfg = Release|iPhone
 		{C2417E44-DEFE-4977-9230-425718A6DECD}.Release|iPhone.Build.0 = Release|iPhone
 		{C2417E44-DEFE-4977-9230-425718A6DECD}.Release|iPhone.Deploy.0 = Release|iPhone
-		{C2417E44-DEFE-4977-9230-425718A6DECD}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
-		{C2417E44-DEFE-4977-9230-425718A6DECD}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
-		{C2417E44-DEFE-4977-9230-425718A6DECD}.Release|iPhoneSimulator.Deploy.0 = Release|iPhoneSimulator
+		{C2417E44-DEFE-4977-9230-425718A6DECD}.Release|iPhoneSimulator.ActiveCfg = Release|iPhone
+		{C2417E44-DEFE-4977-9230-425718A6DECD}.Release|iPhoneSimulator.Build.0 = Release|iPhone
+		{C2417E44-DEFE-4977-9230-425718A6DECD}.Release|iPhoneSimulator.Deploy.0 = Release|iPhone
 		{B8D0CFBB-FAC5-424A-85E5-44C78C20CA68}.AppCenter|Any CPU.ActiveCfg = Release|Any CPU
 		{B8D0CFBB-FAC5-424A-85E5-44C78C20CA68}.AppCenter|Any CPU.Build.0 = Release|Any CPU
 		{B8D0CFBB-FAC5-424A-85E5-44C78C20CA68}.AppCenter|iPhone.ActiveCfg = AppCenter|Any CPU
