@@ -273,7 +273,6 @@
     <Var name="RenameEvents" value="true" />
     <Var name="RenameFields" value="true" />
     <Var name="HidePrivateApi" value="true" />
-    <Var name="HideStrings" value="true" />
     <Var name="UseUnicodeNames" value="true" />
     <Var name="OptimizeMethods" value="true" />
     
