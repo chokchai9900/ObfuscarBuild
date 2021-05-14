@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Obfuscator>
-  <Var name="RenameProperties" value="true" />
-    <Var name="RenameEvents" value="true" />
-    <Var name="RenameFields" value="true" />
-    <Var name="HidePrivateApi" value="true" />
-    <Var name="UseUnicodeNames" value="true" />
-    <Var name="OptimizeMethods" value="true" />
-    <Var name="HideStrings" value="true" />
+  <Module file="TheS.Mana.Client.exe">
+    <SkipType name="*AnonymousType*" skipProperties="true" skipMethods="true" skipFields="true" skipEvents="true" skipStringHiding="true"/>
+  </Module>
 </Obfuscator>

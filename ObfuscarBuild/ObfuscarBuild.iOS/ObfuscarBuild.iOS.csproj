@@ -161,56 +161,15 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
+    <None Include="obfuscar.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ObfuscarBuild\ObfuscarBuild.csproj">
-      <Project>{0FC284B9-5CDB-4A90-8E98-66F700F84283}</Project>
+      <Project>{DD721522-9BD8-4434-B2E4-AEFCE9FA8CA2}</Project>
       <Name>ObfuscarBuild</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="obfuscar.xml" />
-  </ItemGroup>
-  <Target Name="ObfuscateRelease" AfterTargets="AfterBuild;CopyProjectReferencesToPackage" Condition=" '$(Configuration)' == 'Release' ">
-    <!-- (c)2020 vapolia.eu, keep this line. MIT license. -->
-    <ItemGroup>
-      <AssembliesToObfuscate Include="$(TargetDir)\ObfuscarBuild.dll" />
-      <AssembliesToObfuscate Include="$(TargetDir)\ObfuscarBuild.iOS.exe" />
-    </ItemGroup>
-    <PropertyGroup>
-      <ObfuscarAssemblySearchPaths>$(TargetFrameworkDirectory)</ObfuscarAssemblySearchPaths>
-      <_XATargetFrameworkDirectories Condition="'$(_XATargetFrameworkDirectories)' == ''">$(TargetDir)</_XATargetFrameworkDirectories>
-      <LibXamarin_Forms Condition="'$(PkgXamarin_Forms)' != ''">$(PkgXamarin_Forms)\lib\$(TargetFramework)</LibXamarin_Forms>
-      <LibXamarin_Forms Condition="'$(LibXamarin_Forms)' == '' Or !Exists($(LibXamarin_Forms))">$(TargetDir)</LibXamarin_Forms>
-      <ObfuscarXml><![CDATA[
-  <?xml version='1.0'?>
-  <Obfuscator>
-    <Var name="InPath" value="$(TargetDir)" />
-    <Var name="OutPath" value="obfuscarOutput" />
-    <Var name="RenameProperties" value="true" />
-    <Var name="RenameEvents" value="true" />
-    <Var name="RenameFields" value="true" />
-    <Var name="HidePrivateApi" value="true" />
-    <Var name="UseUnicodeNames" value="true" />
-    <Var name="OptimizeMethods" value="true" />
-    <Var name="HideStrings" value="true" />
-    
-    <!-- for a xamarin ios library -->
-    <AssemblySearchPath path="/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS" />
-    
-    <AssemblySearchPath path="$(LibXamarin_Forms)" />
-    @(AssembliesToObfuscate->'<Module file="%(FullPath)" ></Module>',' ')
-  </Obfuscator>
-  ]]></ObfuscarXml>
-    </PropertyGroup>
-    <Message Text="ObfuscarXml $(ObfuscarXml)" />
-    <MakeDir Directories="$(IntermediateOutputPath)obfuscarOutput" />
-    <WriteLinesToFile File="$(IntermediateOutputPath)obfuscar.xml" Lines="$(ObfuscarXml)" Overwrite="true" />
-    <Exec WorkingDirectory="$(IntermediateOutputPath)" Command="$(Obfuscar) -s obfuscar.xml" />
-    <ItemGroup>
-      <ObfuscarFiles Include="$(IntermediateOutputPath)obfuscarOutput\*.*" />
-    </ItemGroup>
-    <Copy DestinationFolder="$(TargetDir)" SourceFiles="@(ObfuscarFiles)" />
-  </Target>
-  
   <Target Name="Obfuscate" AfterTargets="AfterBuild;CopyProjectReferencesToPackage" Condition=" '$(Configuration)' == 'AppCenter' ">
     <!-- (c)2020 vapolia.eu, keep this line. MIT license. -->
     <ItemGroup>
@@ -227,13 +186,6 @@
   <Obfuscator>
     <Var name="InPath" value="$(TargetDir)" />
     <Var name="OutPath" value="obfuscarOutput" />
-    <Var name="RenameProperties" value="true" />
-    <Var name="RenameEvents" value="true" />
-    <Var name="RenameFields" value="true" />
-    <Var name="HidePrivateApi" value="true" />
-    <Var name="UseUnicodeNames" value="true" />
-    <Var name="OptimizeMethods" value="true" />
-    <Var name="HideStrings" value="true" />
     
     <!-- for a xamarin ios library -->
     <AssemblySearchPath path="/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS" />
@@ -250,6 +202,7 @@
     <ItemGroup>
       <ObfuscarFiles Include="$(IntermediateOutputPath)obfuscarOutput\*.*" />
     </ItemGroup>
-    <Copy DestinationFolder="$(TargetDir)" SourceFiles="@(ObfuscarFiles)" />
+    <Copy DestinationFolder="$(TargetDir)\ObfuscarBuild.iOS.app" SourceFiles="$(IntermediateOutputPath)obfuscarOutput\ObfuscarBuild.dll" />
+    <Copy DestinationFolder="$(TargetDir)\ObfuscarBuild.iOS.app" SourceFiles="$(IntermediateOutputPath)obfuscarOutput\ObfuscarBuild.iOS.exe" />
   </Target>
 </Project>
