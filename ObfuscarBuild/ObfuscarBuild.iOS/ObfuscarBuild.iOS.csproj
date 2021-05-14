@@ -149,9 +149,6 @@
     <Reference Include="Xamarin.iOS" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors" />
-    <Reference Include="ObfuscarBuild">
-      <HintPath>Libs\ObfuscarBuild.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Obfuscar">
@@ -167,6 +164,12 @@
     <None Include="obfuscar.xml" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ObfuscarBuild\ObfuscarBuild.csproj">
+      <Project>{DD721522-9BD8-4434-B2E4-AEFCE9FA8CA2}</Project>
+      <Name>ObfuscarBuild</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Target Name="Obfuscate" AfterTargets="AfterBuild;CopyProjectReferencesToPackage" Condition=" '$(Configuration)' == 'AppCenter' ">
     <!-- (c)2020 vapolia.eu, keep this line. MIT license. -->
     <ItemGroup>
