@@ -170,7 +170,7 @@
       <Name>ObfuscarBuild</Name>
     </ProjectReference>
   </ItemGroup>
-  <Target Name="Obfuscate" AfterTargets="_CompileToNative" Condition=" '$(Configuration)' == 'AppCenter' ">
+  <Target Name="Obfuscate" AfterTargets="_CompileToNative" Condition=" '$(Configuration)' == 'Debug' ">
     <!-- (c)2020 vapolia.eu, keep this line. MIT license. -->
     <ItemGroup>
       <AssembliesToObfuscate Include="$(TargetDir)\ObfuscarBuild.dll" />
@@ -186,7 +186,8 @@
   <Obfuscator>
     <Var name="InPath" value="$(TargetDir)" />
     <Var name="OutPath" value="obfuscarOutput" />
-    <Var name="RenameProperties" value="true" />
+    <Var name="KeepPublicApi" value="false" />
+    <Var name="RenameProperties" value="false" />
     <Var name="RenameEvents" value="true" />
     <Var name="RenameFields" value="true" />
     <Var name="HidePrivateApi" value="true" />
