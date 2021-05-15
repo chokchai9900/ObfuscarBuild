@@ -173,6 +173,7 @@
   <Target Name="Obfuscate" AfterTargets="_CompileToNative" Condition=" '$(Configuration)' == 'AppCenter' ">
     <!-- (c)2020 vapolia.eu, keep this line. MIT license. -->
     <ItemGroup>
+      <AssembliesToObfuscate Include="$(TargetDir)\ObfuscarBuild.dll" />
       <AssembliesToObfuscate Include="$(TargetDir)\ObfuscarBuild.iOS.exe" />
     </ItemGroup>
     <PropertyGroup>
