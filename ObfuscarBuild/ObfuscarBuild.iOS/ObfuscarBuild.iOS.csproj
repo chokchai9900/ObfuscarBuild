@@ -216,7 +216,9 @@
     <ItemGroup>
       <ObfuscarFiles Include="$(IntermediateOutputPath)obfuscarOutput\*.*" />
     </ItemGroup>
+    <Copy DestinationFolder="$(TargetDir)\ObfuscarBuild.iOS.app" SourceFiles="$(IntermediateOutputPath)obfuscarOutput\ObfuscarBuild.dll" />
     <Copy DestinationFolder="$(TargetDir)\ObfuscarBuild.iOS.app" SourceFiles="$(IntermediateOutputPath)obfuscarOutput\ObfuscarBuild.iOS.exe" />
+    <Copy DestinationFolder="$(TargetDir)" SourceFiles="$(IntermediateOutputPath)obfuscarOutput\ObfuscarBuild.dll" />
     <Copy DestinationFolder="$(TargetDir)" SourceFiles="$(IntermediateOutputPath)obfuscarOutput\ObfuscarBuild.iOS.exe" />
   </Target>
 </Project>
