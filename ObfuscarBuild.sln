@@ -20,7 +20,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|iPhone = Release|iPhone
 		Release|iPhoneSimulator = Release|iPhoneSimulator
-		Testing|iPhone = Testing|iPhone
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{6E328DDE-FADB-4463-9208-AB890C5DFDC7}.AppCenter|Any CPU.ActiveCfg = Release|Any CPU
