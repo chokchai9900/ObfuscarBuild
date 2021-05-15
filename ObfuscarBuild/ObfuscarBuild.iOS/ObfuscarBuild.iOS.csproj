@@ -214,7 +214,7 @@
     <MakeDir Directories="$(IntermediateOutputPath)obfuscarOutput" />
     <WriteLinesToFile File="$(IntermediateOutputPath)obfuscar.xml" Lines="$(ObfuscarXml)" Overwrite="true" />
     <Exec WorkingDirectory="$(IntermediateOutputPath)" Command="$(Obfuscar) -s obfuscar.xml" />
-    <Copy DestinationFolder="..\ObfuscarBuild\bin\$(Configuration)\netstandard2.0" SourceFiles="$(IntermediateOutputPath)obfuscarOutput\ObfuscarBuild.dll" />
+    <Copy DestinationFolder="..\ObfuscarBuild\bin\$(Platform)\$(Configuration)\netstandard2.0" SourceFiles="$(IntermediateOutputPath)obfuscarOutput\ObfuscarBuild.dll" />
     <Copy DestinationFolder="$(TargetDir)" SourceFiles="$(IntermediateOutputPath)obfuscarOutput\ObfuscarBuild.dll" />
     <Copy DestinationFolder="$(TargetDir)" SourceFiles="$(IntermediateOutputPath)obfuscarOutput\ObfuscarBuild.iOS.exe" />
   </Target>
