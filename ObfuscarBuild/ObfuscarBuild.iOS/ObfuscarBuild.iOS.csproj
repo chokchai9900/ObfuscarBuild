@@ -170,12 +170,16 @@
       <Name>ObfuscarBuild</Name>
     </ProjectReference>
   </ItemGroup>
-  <Target Name="Obfuscate" AfterTargets="_CompileToNative" Condition=" '$(Configuration)' == 'AppCenter' ">
-    <!-- (c)2020 vapolia.eu, keep this line. MIT license. -->
-    <ItemGroup>
-      <AssembliesToObfuscate Include="$(TargetDir)\ObfuscarBuild.dll" />
-      <AssembliesToObfuscate Include="$(TargetDir)\ObfuscarBuild.iOS.exe" />
-    </ItemGroup>
+<Target Name="CopyProjectReferencesToPackage" DependsOnTargets="ResolveReferences">
+    <Message Text="Copy ProjectReferences To Package" />
+</Target>
+<Target
+    Name="ComputeCopyLocalAssemblies"
+    DependsOnTargets="ResolveProjectReferences;ResolveAssemblyReferences">
+    <Message Text="ComputeCopyLocalAssemblies" />
+</Target>
+
+  <Target Name="Obfuscate" AfterTargets="AfterBuild" Condition=" '$(Configuration)' == 'AppCenter' ">
     <PropertyGroup>
       <ObfuscarAssemblySearchPaths>$(TargetFrameworkDirectory)</ObfuscarAssemblySearchPaths>
       <_XATargetFrameworkDirectories Condition="'$(_XATargetFrameworkDirectories)' == ''">$(TargetDir)</_XATargetFrameworkDirectories>
@@ -188,16 +192,16 @@
     <Var name="OutPath" value="obfuscarOutput" />
     <Var name="UseUnicodeNames" value="true" />
     <Var name="KeepPublicApi" value="true" />
-
-    <Var name="HidePrivateApi" value="false" />
-    <Var name="RenameFields" value="false" />
-    <Var name="RenameEvents" value="false" />
-    <Var name="HideStrings" value="false" />
+    
+    <Var name="HidePrivateApi" value="true" />
+    <Var name="RenameFields" value="true" />
+    <Var name="RenameEvents" value="true" />
+    <Var name="HideStrings" value="true" />
     <Var name="RenameProperties" value="false" />
-    <Var name="ReuseNames" value="false" />
-    <Var name="SuppressIldasm" value="false" />
-    <Var name="UseKoreanNames" value="false" />
-    <Var name="OptimizeMethods" value="false" />
+    <Var name="ReuseNames" value="true" />
+    <Var name="SuppressIldasm" value="true" />
+    <Var name="UseKoreanNames" value="true" />
+    <Var name="OptimizeMethods" value="true" />
     
     <Var name="AnalyzeXaml" value="false" />
     <Var name="MarkedOnly" value="false" />
@@ -205,8 +209,13 @@
     <!-- for a xamarin ios library -->
     <AssemblySearchPath path="/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS" />
     
+    <!-- for lib path -->
     <AssemblySearchPath path="$(LibXamarin_Forms)" />
-    @(AssembliesToObfuscate->'<Module file="%(FullPath)" ></Module>',' ')
+
+    <Module file="$(TargetDir)/ObfuscarBuild.dll" >
+    </Module> 
+    <Module file="$(TargetDir)/ObfuscarBuild.iOS.exe" >
+    </Module>
   </Obfuscator>
   ]]></ObfuscarXml>
     </PropertyGroup>
@@ -217,8 +226,7 @@
     <ItemGroup>
       <ObfuscarFiles Include="$(IntermediateOutputPath)obfuscarOutput\*.*" />
     </ItemGroup>
-    <Copy DestinationFolder="$(TargetDir)\ObfuscarBuild.iOS.app" SourceFiles="$(IntermediateOutputPath)obfuscarOutput\ObfuscarBuild.dll" />
-    <Copy DestinationFolder="$(TargetDir)\ObfuscarBuild.iOS.app" SourceFiles="$(IntermediateOutputPath)obfuscarOutput\ObfuscarBuild.iOS.exe" />
+    <Copy DestinationFolder="..\ObfuscarBuild\bin\$(Configuration)\netstandard2.0" SourceFiles="$(IntermediateOutputPath)obfuscarOutput\ObfuscarBuild.dll" />
     <Copy DestinationFolder="$(TargetDir)" SourceFiles="$(IntermediateOutputPath)obfuscarOutput\ObfuscarBuild.dll" />
     <Copy DestinationFolder="$(TargetDir)" SourceFiles="$(IntermediateOutputPath)obfuscarOutput\ObfuscarBuild.iOS.exe" />
   </Target>
