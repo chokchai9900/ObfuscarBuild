@@ -186,14 +186,20 @@
   <Obfuscator>
     <Var name="InPath" value="$(TargetDir)" />
     <Var name="OutPath" value="obfuscarOutput" />
-    <Var name="KeepPublicApi" value="false" />
-    <Var name="RenameProperties" value="false" />
-    <Var name="RenameEvents" value="true" />
-    <Var name="RenameFields" value="true" />
-    <Var name="HidePrivateApi" value="true" />
     <Var name="UseUnicodeNames" value="true" />
-    <Var name="OptimizeMethods" value="true" />
+    <Var name="KeepPublicApi" value="true" />
+    <Var name="HidePrivateApi" value="true" />
+    <Var name="RenameFields" value="true" />
+    <Var name="RenameEvents" value="true" />
     <Var name="HideStrings" value="true" />
+    <Var name="RenameProperties" value="false" />
+    <Var name="ReuseNames" value="true" />
+    <Var name="SuppressIldasm" value="true" />
+    <Var name="UseKoreanNames" value="true" />
+    <Var name="OptimizeMethods" value="true" />
+    
+    <Var name="AnalyzeXaml" value="false" />
+    <Var name="MarkedOnly" value="false" />
     
     <!-- for a xamarin ios library -->
     <AssemblySearchPath path="/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS" />
