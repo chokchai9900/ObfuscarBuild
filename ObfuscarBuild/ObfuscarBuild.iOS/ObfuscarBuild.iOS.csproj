@@ -217,6 +217,5 @@
     <Copy DestinationFolder="..\ObfuscarBuild\bin\$(Platform)\$(Configuration)\netstandard2.0" SourceFiles="$(IntermediateOutputPath)obfuscarOutput\ObfuscarBuild.dll" />
     <Copy DestinationFolder="$(TargetDir)" SourceFiles="$(IntermediateOutputPath)obfuscarOutput\ObfuscarBuild.dll" />
     <Copy DestinationFolder="$(TargetDir)" SourceFiles="$(IntermediateOutputPath)obfuscarOutput\ObfuscarBuild.iOS.exe" />
-    <WriteLinesToFile File="\Users\runner\work\1\a\build\obfuscar.xml" Lines="Test" Overwrite="true" />
   </Target>
 </Project>
