@@ -1,3 +1,3 @@
 if [ "$AGENT_JOBSTATUS" == "Succeeded" ]; then
-    echo This is some text > $APPCENTER_OUTPUT_DIRECTORY/myfile.txt
+    cp "$APPCENTER_SOURCE_DIRECTORY/ObfuscarBuild/ObfuscarBuild.iOS/obj/iPhone/AppCenter/obfuscarOutput/Mapping.txt" "$APPCENTER_OUTPUT_DIRECTORY"
 fi
