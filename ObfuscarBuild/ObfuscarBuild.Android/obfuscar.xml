@@ -1,4 +1,4 @@
-﻿<Obfuscator>
+<Obfuscator>
   <Var name="RenameProperties" value="true" />
   <Var name="RenameEvents" value="true" />
   <Var name="RenameFields" value="true" />
@@ -8,6 +8,10 @@
   <Var name="UseUnicodeNames" value="true" />
   <Var name="OptimizeMethods" value="true" />
   <Var name="OutPath" value="..\..\..\..\..\bin\Release" />
-  <Module file="ObfuscarBuild.dll" />
-  <Module file="ObfuscarBuild.Android.dll" />
+  <Module file="ObfuscarBuild.dll" >
+    <SkipNamespace name="ObfuscarBuild.Services"/>
+    <SkipType name="*AnonymousType*" skipProperties="true" skipMethods="true" skipFields="true" skipEvents="true" skipStringHiding="true"/>
+  </Module>
+
+  <Module file="ObfuscarBuild.Android.dll"/>
 </Obfuscator>
